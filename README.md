@@ -2,7 +2,7 @@
 A blog platform built with TypeScript, Next.js, Zustand, and Tailwind CSS. It includes a blog list,
 search functionality, dark/light mode toggle
 
-## DEMO: https://blog-app-gold-one.vercel.app/
+## DEMO URL: https://blog-app-gold-one.vercel.app/
 
 ## Features
 - **Blog List**: Displays blog posts fetched from an external API
@@ -24,12 +24,6 @@ search functionality, dark/light mode toggle
 
     ```bash
     npm install
-    ```
-
-   or
-
-   ```bash
-    yarn
     ```
 
 3. Start the development server:
