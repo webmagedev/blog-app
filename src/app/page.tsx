@@ -1,8 +1,8 @@
 "use client"
 import {useEffect} from 'react';
 import {useBlogStore} from '@/store/useBlogStore';
-import axios from "axios";
 import dynamic from 'next/dynamic';
+import {getPosts} from "@/api";
 
 const SearchBar = dynamic(() => import('@/components/SearchBar'), {
     ssr: false,
@@ -16,11 +16,9 @@ const Home = () => {
     const {filteredPosts, setPosts} = useBlogStore();
 
     useEffect(() => {
-        const fetchPosts = async () => {
-            const {data} = await axios.get('https://jsonplaceholder.typicode.com/posts');
-            setPosts(data);
-        };
-        fetchPosts();
+        getPosts().then((data) => {
+            setPosts(data)
+        });
     }, [setPosts]);
 
     return (

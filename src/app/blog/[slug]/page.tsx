@@ -1,13 +1,7 @@
 import {notFound} from 'next/navigation';
 import Link from 'next/link';
-import axios from "axios";
 import Image from "next/image";
-import {Post} from "@/types";
-
-async function getPost(slug: string): Promise<Post | null> {
-    const {data} = await axios.get(`https://jsonplaceholder.typicode.com/posts/${slug}`);
-    return data;
-}
+import {getPost} from "@/api";
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
     const post = await getPost((await params).slug);
