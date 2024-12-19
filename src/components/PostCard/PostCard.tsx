@@ -21,7 +21,7 @@ const PostCard = ({post}: { post: BlogPost }) => {
                 quality={75}
             />
             <div className="flex h-full justify-between flex-col item p-4">
-                <p className="text-xl font-bold">{shortTitle}...</p>
+                <p className="text-xl font-bold">{shortTitle}</p>
                 <p className="text-gray-500">{shortInfo}...</p>
                 <div>
                     <p>Author: <b>John Doe {post.id}</b></p>

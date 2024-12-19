@@ -2,13 +2,7 @@ import {notFound} from 'next/navigation';
 import Link from 'next/link';
 import axios from "axios";
 import Image from "next/image";
-
-interface Post {
-    id: number;
-    title: string;
-    body: string;
-    userId: number;
-};
+import {Post} from "@/types";
 
 async function getPost(slug: string): Promise<Post | null> {
     const {data} = await axios.get(`https://jsonplaceholder.typicode.com/posts/${slug}`);

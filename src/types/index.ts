@@ -14,3 +14,10 @@ export interface BlogPost {
     author?: string;
     publishedAt?: string;
 }
+
+export interface Post {
+    id: number;
+    title: string;
+    body: string;
+    userId: number;
+}
