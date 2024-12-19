@@ -1,13 +1,5 @@
 import { create } from 'zustand';
-import { BlogPost } from '../types';
-
-interface BlogState {
-    posts: BlogPost[];
-    filteredPosts: BlogPost[];
-    searchQuery: string;
-    setPosts: (posts: BlogPost[]) => void;
-    setSearchQuery: (query: string) => void;
-}
+import {BlogState} from '@/types';
 
 export const useBlogStore = create<BlogState>((set) => ({
     posts: [],

@@ -1,9 +1,16 @@
 "use client"
 import {useEffect} from 'react';
-import BlogList from '../components/BlogList';
-import SearchBar from '../components/SearchBar';
 import {useBlogStore} from '@/store/useBlogStore';
 import axios from "axios";
+import dynamic from 'next/dynamic';
+
+const SearchBar = dynamic(() => import('@/components/SearchBar'), {
+    ssr: false,
+});
+
+const BlogList = dynamic(() => import('@/components/BlogList'), {
+    loading: () => <div>Loading...</div>,
+});
 
 const Home = () => {
     const {filteredPosts, setPosts} = useBlogStore();

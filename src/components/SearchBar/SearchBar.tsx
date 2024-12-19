@@ -18,7 +18,10 @@ const SearchBar = () => {
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
                 className="w-full p-4 rounded-md border dark:bg-gray-800"
-                placeholder="Search blog posts..."
+                placeholder="Search blog posts"
+                aria-label="Search blog posts"
+                autoFocus
+                tabIndex={0}
             />
         </div>
     );
