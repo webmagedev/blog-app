@@ -26,12 +26,6 @@ search functionality, dark/light mode toggle
     npm install
     ```
 
-   or
-
-   ```bash
-    yarn
-    ```
-
 3. Start the development server:
 
     ```bash
